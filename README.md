@@ -1,4 +1,4 @@
-#JWT e-Login
+# JWT e-Login
 ## About this app
 
 Its a full-stack login/authorization app using the MERN stack. 
@@ -10,7 +10,7 @@ Its a full-stack login/authorization app using the MERN stack.
 - JWT Authentication (with Redux), persisting the state to the local storage
 - Other tools : jsonwebtoken , bcrypt , mongoose ,cors, axios, react-router , bootstrap
 
-##This app will allow users to 
+## This app will allow users to 
 
 - Register
 - Log in
