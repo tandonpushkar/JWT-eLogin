@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div class="jumbotron">
-            <h1 class="display-3">JWT eLogin</h1>
-            <p class="lead">Its a full-stack login/authorization
+        <div className="jumbotron">
+            <h1 className="display-3">JWT eLogin</h1>
+            <div className="lead">Its a full-stack login/authorization
             app using the MERN stack. <br />
                 <ul>
                     <li>MongoDB for our database</li>
@@ -14,10 +14,10 @@ export default function About() {
                     <li>JWT Authentication (with Redux), persisting the state to the local storage</li>
                     <li>Other tools : jsonwebtoken , bcrypt , mongoose ,cors, axios, react-router , bootstrap</li>
                 </ul>
-            </p>
+            </div>
 
-            <hr class="my-4" />
-            <p>This app will allow users to <br />
+            <hr className="my-4" />
+            <div>This app will allow users to <br />
                 <ul>
                     <li>Register</li>
                     <li>Log in</li>
@@ -25,7 +25,7 @@ export default function About() {
                     <li>Stay logged in when they close the app or refresh the page</li>
                     <li>Log out</li>
                 </ul>
-            </p>
+            </div>
         </div >
     )
 }

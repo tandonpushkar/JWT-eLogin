@@ -5,19 +5,14 @@ export default persist({
     LoggedInState: {
         LoggedIn: false,
         UserProfile: [],
-
-
         //Thunks
         fetchUser: thunk(async actions => {
-            const res = await axios.get("http://127.0.0.1:5000/api/users/posts", { headers: { "x-auth-token": localStorage.getItem('token') } })
+            const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users/posts`, { headers: { "x-auth-token": localStorage.getItem('token') } })
             const profiledata = res.data;
             actions.setProfile(profiledata);
         }),
 
-
-
-        // define actions
-
+        //actions
         setProfile: action((state, profiledata) => {
             state.UserProfile = profiledata
         }),

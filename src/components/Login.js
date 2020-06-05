@@ -17,7 +17,7 @@ export default function Login() {
     const handleSubmit = event => {
         event.preventDefault();
 
-        axios.post("http://127.0.0.1:5000/api/users/login", {
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/users/login`, {
             "email": Email,
             "password": Password
         }).then(res => {
@@ -35,25 +35,25 @@ export default function Login() {
             }
             {
                 RegToggle ? <Register handleTog={handleRegTog} /> :
-                    <div class="container my-4  ">
+                    <div className="container my-4  ">
                         <section id="register-form">
-                            <div class="row d-flex justify-content-center">
-                                <div class="w-30">
+                            <div className="row d-flex justify-content-center">
+                                <div className="w-30">
                                     <section>
-                                        <form class="text-center border border-light">
-                                            <p class="h4 mb-4">Sign In</p>
-                                            <div class="form-row mb-4">
-                                                <div class="col">
-                                                    <input type="email" class="form-control mb-4" placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} />
+                                        <form className="text-center border border-light">
+                                            <p className="h4 mb-4">Sign In</p>
+                                            <div className="form-row mb-4">
+                                                <div className="col">
+                                                    <input type="email" className="form-control mb-4" placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} />
                                                 </div>
-                                                <div class="col">
-                                                    <input type="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" onChange={(e) => setPassword(e.target.value)} />
-                                                    <small class="form-text text-muted mb-4">
+                                                <div className="col">
+                                                    <input type="password" className="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" onChange={(e) => setPassword(e.target.value)} />
+                                                    <small className="form-text text-muted mb-4">
                                                         At least 8 characters and 1 digit
                                                     </small>
                                                 </div>
                                             </div>
-                                            <button onClick={handleSubmit} class="btn btn-info my-4 btn-block waves-effect waves-light">Sign In</button>
+                                            <button onClick={handleSubmit} className="btn btn-info my-4 btn-block waves-effect waves-light">Sign In</button>
                                             <p>Not Registered?
                         {" "}< text style={{ cursor: "pointer", color: "blue" }} onClick={() => SetRegToggle(true)} >Create an account</ text>
                                             </p>

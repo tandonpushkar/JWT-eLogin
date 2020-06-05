@@ -11,42 +11,42 @@ export default function Header() {
         localStorage.clear();
     }
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
 
 
-            <Link class="navbar-brand" to="/">JWT eLogin</Link>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <Link className="navbar-brand" to="/">JWT eLogin</Link>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav mr-auto">
                     {LoggedIn ?
                         <React.Fragment>
-                            <li class="nav-item active">
-                                <Link class="nav-link" to="/">Home <span class="sr-only">(current)</span></Link>
+                            <li className="nav-item active">
+                                <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/about">About</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/about">About</Link>
                             </li>
-                            <li class="nav-item dropdown">
-                                <div data-toggle="dropdown" style={{ cursor: "pointer" }} class="nav-link dropdown-toggle user-action"><img src="https://gravatar.com/avatar/f0b6f51cd783cb4a3346bf3c6083e3c7?s=200&d=mp&r=x" style={{ height: "1em", width: "1em" }} alt="Avatar" /> {profileData.firstname} {profileData.lastname} <b class="caret"></b></div>
-                                <ul class="dropdown-menu">
-                                    <li><Link to="/" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</Link></li>
-                                    <li><Link to="/" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</Link></li>
-                                    <li><Link to="/" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</Link></li>
-                                    <li class="divider dropdown-divider"></li>
-                                    <li onClick={logout}><Link to="/" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</Link></li>
+                            <li className="nav-item dropdown">
+                                <div data-toggle="dropdown" style={{ cursor: "pointer" }} className="nav-link dropdown-toggle user-action"><img src="https://gravatar.com/avatar/f0b6f51cd783cb4a3346bf3c6083e3c7?s=200&d=mp&r=x" style={{ height: "1em", width: "1em" }} alt="Avatar" /> {profileData.firstname} {profileData.lastname} <b className="caret"></b></div>
+                                <ul className="dropdown-menu">
+                                    <li><Link to="/" className="dropdown-item"><i className="fa fa-user-o"></i> Profile</Link></li>
+                                    <li><Link to="/" className="dropdown-item"><i className="fa fa-calendar-o"></i> Calendar</Link></li>
+                                    <li><Link to="/" className="dropdown-item"><i className="fa fa-sliders"></i> Settings</Link></li>
+                                    <li className="divider dropdown-divider"></li>
+                                    <li onClick={logout}><Link to="/" className="dropdown-item"><i className="material-icons">&#xE8AC;</i> Logout</Link></li>
                                 </ul>
                             </li>
                         </React.Fragment> :
                         <React.Fragment>
 
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/about">About</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/about">About</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/login">Login</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/login">Login</Link>
                             </li>
                         </React.Fragment>
                     }
